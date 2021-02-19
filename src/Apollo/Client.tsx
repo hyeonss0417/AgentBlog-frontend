@@ -27,6 +27,7 @@ const middlewareAuthLink = new ApolloLink((operation, forward) => {
 
   return forward(operation);
 });
+
 const link = ApolloLink.from([
   middlewareAuthLink,
   createPersistedQueryLink({
