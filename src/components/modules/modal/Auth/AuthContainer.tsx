@@ -99,7 +99,8 @@ const AuthContainer = ({ closeModal }: AuthContainerProps) => {
           }
           closeModal();
         } catch (err) {
-          toast.error("문제가 발생했습니다." + err);
+          toast.error("문제가 발생했습니다.");
+          console.log(err);
         }
       }
     }
