@@ -35,6 +35,6 @@ jobs:
           # port: ${{ secrets.PORT }} # default : 22
           script: |
             cd ${{ secrets.SSH_PATH }} && git pull
-            docker build --no-cache=true -t hyeonss/agentblog:latest .
+            docker build -t hyeonss/agentblog:latest .
             docker rm -f app
             docker run -d --name app -p 80:80 hyeonss/agentblog:latest

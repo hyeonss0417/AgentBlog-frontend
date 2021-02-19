@@ -5,7 +5,7 @@ import {
   InMemoryCache,
 } from "@apollo/client";
 import { createPersistedQueryLink } from "@apollo/client/link/persisted-queries";
-import { sha256 } from "crypto-hash";
+import sha256 from "sha256";
 import { defaults, resolvers } from "./LocalState";
 
 // export const serverUri =
